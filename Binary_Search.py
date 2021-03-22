@@ -32,8 +32,8 @@ line = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 value = 8
 
-print(binary_search(line, 8))
-print(list[(binary_search(line, 8))])
+print(binary_search(line, 8))      // index
+print(line[(binary_search(line, 8))])        //value
 
 
 
