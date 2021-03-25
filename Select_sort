@@ -1,0 +1,32 @@
+"""
+selection_sort
+
+First search is minimum element value. i.e 2 is find and currently located at the
+first position.
+
+Second 2 is exclude search element value. So find to the 4. 4 is ccurrently located
+at the pision.
+
+Repeat the above process.
+
+Time complexity:
+O(N^2)
+
+Reference ULR
+:https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/tutorial/
+"""
+
+def selection_sort (A, n):
+    for i in range(n-1):
+        minimum = i
+        for j in range(i+1, n):
+            if A[j] < A[minimum]:
+                minimum = j
+        A[i], A[minimum] = A[minimum], A[i] #Swap fucntion
+
+list = [7, 5, 4, 2]
+
+for i in range(len(list)):
+    selection_sort(list, len(list))
+    
+print(list)
