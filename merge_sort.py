@@ -19,13 +19,9 @@ https://www.geeksforgeeks.org/merge-sort/
 
 def mergeSort(arr):
     if len(arr) > 1:
-        print(len(arr))
-        print(arr ,'u')
         mid = len(arr)//2 # finding the mid of the array
         L = arr[:mid] #Dividing the array element
-        print(L, '1')
         R = arr[mid:] #into 2 halves
-        print(R, '2')
         mergeSort(L) # Sorting the first half
         mergeSort(R) #Sorting the second half
         i = j = k = 0
@@ -34,11 +30,9 @@ def mergeSort(arr):
             if L[i] < R[j]:
                 arr[k] = L[i]
                 i += 1
-                print(L , 'A')
             else:
                 arr[k] = R[j]
                 j += 1
-                print(L , 'B')
             k += 1
             
         #Checking if any element was left
@@ -46,12 +40,10 @@ def mergeSort(arr):
             arr[k] = L[i]
             i += 1
             k += 1
-            print(L , 'C')
         while j < len(R):
             arr[k] = R[j]
             j += 1
             k += 1
-            print(L, 'D')
             
 """                
 def printList(arr):
